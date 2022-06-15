@@ -1,0 +1,13 @@
+{
+  "Token": "",
+  "ServerID": "",
+  "BanAll?": "Yes",
+  "DeleteAllChannels?": "Yes",
+  "DeleteAllRoles": "Yes",
+  "SpamChannels?": "Yes",
+  "SpamRoles?": "Yes",
+  "SpammedChannelAmount": 500,
+  "SpammedChannelName": "StarHubNo1",
+  "SpammedRoleAmount": 250,
+  "SpammedRoleName": "StarHubNo1"
+}
